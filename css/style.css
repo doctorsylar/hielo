@@ -2,4 +2,176 @@ html, body, * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 2500px;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: absolute;
+    background-color: transparent;
+    top: 10px;
+    z-index: 2;
+}
+header .logo {
+    color: #c8c8c8;
+    font-size: 18px;
+}
+header .logo a {
+    color: inherit;
+}
+header .logo a:hover span {
+    color: inherit;
+}
+header .logo a span {
+    font-size: 22px;
+    color: #ffffff;
+}
+header .menu-toggler {
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+header .menu-toggler span {
+    font-size: 20px;
+    display: none;
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(250px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(250px);
+    }
+}
+header nav {
+    transform: translateX(250px);
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 250px;
+    background-color: #000000f4;
+    color: #ffffff;
+}
+header nav.show {
+    animation: slideInRight 0.2s linear 1 forwards;
+}
+header nav.unshow {
+    animation: slideOutRight 0.15s linear 1 forwards;
+}
+header nav h3.menu-closer {
+    letter-spacing: 3px;
+    margin: 30px 30px 15px 20px;
+    text-align: right;
+    cursor: pointer;
+}
+header nav .menu-list {
+    list-style: none;
+    padding: 0 0 0 30px;
+}
+header nav .menu-list .menu-item a {
+    display: inline-block;
+    width: 90%;
+    text-transform: uppercase;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #888888;
+    border-bottom: 1px solid #ffffff;
+}
+header nav .menu-list .menu-item a:hover {
+    color: #ffffff;
+}
+
+    /* CAROUSEL */
+.greetings-slider .carousel-container {
+    background-color: #000000;
+}
+.greetings-slider .main-carousel {
+    position: relative;
+}
+.greetings-slider .main-carousel .item {
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.greetings-slider .main-carousel .item img {
+    opacity: 0.5;
+}
+.greetings-slider .main-carousel .item .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    top: 40%;
+}
+.greetings-slider .main-carousel .item .text p {
+    display: none;
+}
+.greetings-slider .main-carousel .item .text h1 {
+    font-size: 32px;
+}
+.greetings-slider .main-carousel .owl-dots {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+    header .menu-toggler span {
+        display: inline;
+    }
+    .greetings-slider .main-carousel .item .text p {
+        display: inline;
+        font-size: 18px ;
+    }
+    .greetings-slider .main-carousel .item .text p::after {
+        content: '';
+        margin: 20px auto;
+        width: 40%;
+        border-bottom: 1px solid #bbbbbb;
+        display: block;
+    }
+}
+@media screen and (min-width: 768px) {
+    .greetings-slider .main-carousel .item .text p {
+        font-size: 22px ;
+    }
+    .greetings-slider .main-carousel .item .text h1 {
+        font-size: 36px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .greetings-slider .main-carousel .item .text p {
+        font-size: 24px ;
+    }
+    .greetings-slider .main-carousel .item .text h1 {
+        font-size: 40px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .greetings-slider .main-carousel .item .text p {
+        font-size: 24px ;
+    }
+    .greetings-slider .main-carousel .item .text h1 {
+        font-size: 46px;
+    }
 }

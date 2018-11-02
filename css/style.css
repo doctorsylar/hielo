@@ -153,6 +153,7 @@ header nav .menu-list .menu-item a:hover {
 main {
     background-color: #f2f2f2;
     color: #a6a6a6;
+    padding: 75px 0 0;
 }
 main .cards-container {
     padding: 50px 5%;
@@ -222,12 +223,57 @@ main .cards-lower .picture-card img {
     height: 100%;
 }
 /* FOOTER */
+footer {
+    background-color: rgba(0, 0, 0, 0.957);
+    padding: 75px 0;
+}
+footer .socials {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+footer .socials li {
+    padding-right: 24px;
+}
+footer .socials li a {
+    opacity: 0.4;
+    transition: 0.1s;
+}
+footer .socials li a:hover {
+    opacity: 1;
+}
+footer .copyright {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+}
+footer .copyright span {
+    opacity: 0.4;
+
+}
+footer .copyright a {
+    border-bottom: 1px dotted #ff641e;
+    color: #ff641e;
+    transition: 0.4s all;
+}
+footer .copyright a:hover {
+    color: #ffffff;
+    border-bottom: none;
+}
 
 
 /* MEDIA */
 /* MEDIA */
 /* MEDIA */
 @media screen and (min-width: 576px) {
+    header {
+        padding: 15px 20px;
+    }
+    header nav h3.menu-closer {
+        margin: 20px 30px 15px 20px;
+    }
     header .menu-toggler span {
         display: inline;
     }
@@ -237,12 +283,6 @@ main .cards-lower .picture-card img {
     }
 }
 @media screen and (min-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-    header nav h3.menu-closer {
-        margin: 20px 30px 15px 20px;
-    }
     .greetings-slider .main-carousel .item .text p {
         font-size: 22px ;
     }
@@ -252,6 +292,9 @@ main .cards-lower .picture-card img {
     main .cards-container {
         grid-template-columns: auto auto;
     }
+    main .cards-lower .cards-container {
+        grid-template-columns: auto;
+    }
 }
 @media screen and (min-width: 992px) {
     .greetings-slider .main-carousel .item .text p {
@@ -259,6 +302,9 @@ main .cards-lower .picture-card img {
     }
     .greetings-slider .main-carousel .item .text h1 {
         font-size: 40px;
+    }
+    main .cards-lower .cards-container {
+        grid-template-columns: auto auto;
     }
 }
 @media screen and (min-width: 1200px) {

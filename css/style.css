@@ -11,6 +11,13 @@ a {
     text-decoration: none;
     color: #ffffff;
 }
+.underlined::after {
+    content: '';
+    margin: 10px auto;
+    width: 50%;
+    border-bottom: 1px solid #bbbbbb;
+    display: block;
+}
 
 /* HEADER */
 header {
@@ -147,6 +154,74 @@ main {
     background-color: #f2f2f2;
     color: #a6a6a6;
 }
+main .cards-container {
+    padding: 50px 5%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 30px 60px;
+    margin: 0 auto;
+}
+main .card-item {
+    background-color: #ffffff;
+}
+main .card-item img {
+    width: 100%;
+}
+main .card-item .card-text-area {
+    padding: 30px;
+}
+main .card-item .upper-text {
+    letter-spacing: 5px;
+}
+main .card-item h3 {
+    color: #111111;
+    font-size: 24px;
+}
+main p {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+}
+main h3 {
+    font-weight: lighter;
+    font-size: 24px;
+    text-align: center;
+}
+main .card-item .card-text {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 15px;
+}
+main .section-divider {
+    height: 200px;
+    background: url("../img/bg.jpg") center fixed no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+}
+main .section-divider p {
+    font-size: 18px;
+}
+main .section-divider h3 {
+    color: #ffffff;
+}
+main .cards-lower {
+    padding: 50px 0;
+}
+main .cards-lower p {
+    font-size: 18px;
+}
+main .cards-lower h3 {
+    color: #111111;
+}
+main .cards-lower .picture-card {
+    background-color: #ffffff;
+    padding: 15px;
+}
+main .cards-lower .picture-card img {
+    width: 100%;
+    height: 100%;
+}
+/* FOOTER */
 
 
 /* MEDIA */
@@ -159,13 +234,6 @@ main {
     .greetings-slider .main-carousel .item .text p {
         display: inline;
         font-size: 18px ;
-    }
-    .greetings-slider .main-carousel .item .text p::after {
-        content: '';
-        margin: 20px auto;
-        width: 40%;
-        border-bottom: 1px solid #bbbbbb;
-        display: block;
     }
 }
 @media screen and (min-width: 768px) {
@@ -180,6 +248,9 @@ main {
     }
     .greetings-slider .main-carousel .item .text h1 {
         font-size: 36px;
+    }
+    main .cards-container {
+        grid-template-columns: auto auto;
     }
 }
 @media screen and (min-width: 992px) {

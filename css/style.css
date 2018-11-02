@@ -17,11 +17,12 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 0 10px;
     position: absolute;
     background-color: transparent;
-    top: 0px;
-    z-index: 2;
+    top: 0;
+    z-index: 5;
+    transition: background-color 0.3s linear;
 }
 header .logo {
     color: #c8c8c8;
@@ -87,8 +88,7 @@ header nav.unshow {
     animation: slideOutRight 0.15s linear 1 forwards;
 }
 header nav h3.menu-closer {
-    letter-spacing: 3px;
-    margin: 20px 30px 15px 20px;
+    margin: 5px;
     text-align: right;
     cursor: pointer;
 }
@@ -169,6 +169,12 @@ main {
     }
 }
 @media screen and (min-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+    header nav h3.menu-closer {
+        margin: 20px 30px 15px 20px;
+    }
     .greetings-slider .main-carousel .item .text p {
         font-size: 22px ;
     }

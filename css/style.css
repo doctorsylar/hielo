@@ -49,6 +49,11 @@ header .menu-toggler {
     font-size: 24px;
     color: #ffffff;
     cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.1s;
+}
+header .menu-toggler:hover {
+    opacity: 1;
 }
 header .menu-toggler span {
     font-size: 20px;
